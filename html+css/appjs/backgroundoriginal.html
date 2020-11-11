@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 background-origin属性</title>
+    <style type="text/css">
+        body
+        {
+            font-family:微软雅黑;
+            font-size:14px;
+        }
+        #view
+        {
+            display:inline-block;
+            width:400px;
+            padding:15px;
+            font-size:15px;
+            border:15px dashed #F1F1F1;
+            background-image:url("./8-3-2.png");
+            background-origin:border-box;
+            background-repeat:no-repeat;
+        }
+    </style>
+    <script src="./jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#ckb1").click(function () {
+                $("#view").css("background-origin", "border-box");
+            });
+            $("#ckb2").click(function () {
+                $("#view").css("background-origin", "padding-box");
+            });
+            $("#ckb3").click(function () {
+                $("#view").css("background-origin", "content-box");
+            });
+            $("#ckb4").click(function () {
+                $("#view").css("background-clip", "border-box");
+            });
+            $("#ckb5").click(function () {
+                $("#view").css("background-clip", "padding-box");
+            });
+            $("#ckb6").click(function () {
+                $("#view").css("background-clip", "content-box");
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="select">
+        background-origin：
+        <input id="ckb1" name="group" type="radio" value="border-box" checked="checked"/><label for="ckb1">border-box</label>
+        <input id="ckb2" name="group" type="radio" value="padding-box"/><label for="ckb2">padding-box</label>
+        <input id="ckb3" name="group" type="radio" value="content-box"/><label for="ckb3">content-box</label>
+    </div>
+    <div id="selectclip">
+        background-clip：
+        <input id="ckb4" name="group" type="radio" value="border-box"/><label for="ckb4">border-box</label>
+        <input id="ckb5" name="group" type="radio" value="padding-box"/><label for="ckb5">padding-box</label>
+        <input id="ckb6" name="group" type="radio" value="content-box"/><label for="ckb6">content-box</label>
+    </div>
+    <div id="view">
+        绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网，绿叶学习网。
+    </div>
+</body>
+</html>

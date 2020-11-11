@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS3 @keyframes</title>
+    <style type="text/css">
+        @-webkit-keyframes mycolor
+        {
+            0%{background-color:red;}
+            30%{background-color:blue;}
+            60%{background-color:yellow;}
+            100%{background-color:green;}
+        }
+        div
+        {
+            width:100px;
+            height:100px;
+            border-radius:50px;
+            background-color:red;
+        }
+        div:hover
+        {
+            -webkit-animation-name:mycolor;
+            -webkit-animation-duration:5s;
+            -webkit-animation-timing-function:linear;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

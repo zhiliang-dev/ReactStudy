@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>CSS3 :enabled选择器与:disabled选择器</title>
+  <style type="text/css">
+    input[type="text"]:enabled {
+      outline: 1px solid #63E3FF;
+    }
+
+    input[type="text"]:disabled {
+      background-color: #FFD572;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <p><label for="enabled">可用:<input type="text" name="enabled" /></label></p>
+    <p><label for="disabled">禁用:</label><input type="text" name="disabled" disabled="disabled" /></p>
+  </form>
+</body>
+
+</html>

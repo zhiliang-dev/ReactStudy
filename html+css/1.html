@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>滚动小球</title>
+  <style type="text/css">
+    * {
+          margin : 0px;
+          padding : 0px;
+      }
+    #btn {
+        position : absolute;
+        top : 200px;
+        left : 20px;
+    }
+    #stop-btn {
+        position: absolute;
+        top: 200px;
+        left: 100px;
+    }
+    #smallBall {
+        width : 100px;
+        height : 100px;
+        line-height : 100px;
+        text-align : center;
+        /* border : 1px solid black */
+        border-radius : 100%;
+        background-color : #ff0000;
+        position : absolute;
+        top : 50px;
+        left : 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="smallBall">小球</div>
+  <button id="btn">滚动小球</button>
+  <button id="stop-btn">停止</button>
+      <script type="text/javascript">
+        var btn = document.getElementById("btn");
+        var smallBall = document.getElementById("smallBall");
+        const stopButtonElement = document.querySelector("#stop-btn");
+        var speed = 10;
+        var x = true;
+        let timer;
+        let that = this;
+        btn.onclick = function () {
+            that.timer = setInterval(run, 30);
+          function run() {
+            if (smallBall.offsetLeft == "0") {
+              x = true;
+            } else if (smallBall.offsetLeft == "600") {
+              x = false;
+            }
+            if (x == true) {
+              smallBall.style.left = smallBall.offsetLeft + speed + "px";
+            } else {
+              console.log(smallBall.offsetLeft);
+              smallBall.style.left = smallBall.offsetLeft - speed + "px";
+            }
+          }
+        }
+
+        stopButtonElement.addEventListener("click",function (e) {
+            clearInterval(that.timer);
+            smallBall.style.left=0+'px';
+        })
+      </script>
+
+</body>
+<html>

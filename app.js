@@ -53,3 +53,14 @@ let iterators = b.values();
 for (const iterator of iterators) {
   console.log(iterator);
 }
+
+console.log("排序："); // 默认排序顺序是在将元素转换为字符串，然后比较它们的UTF-16代码单元值序列时构建的 改变原数组
+a.sort(function (a, b) {
+  return a - b;
+});
+
+// 数组 随机排序
+// a.sort(function (a, b) {
+//   return Math.random() - 0.5;
+// });
+console.log(a);
